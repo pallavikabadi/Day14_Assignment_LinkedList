@@ -15,7 +15,7 @@ public class LinkedListMain {
         else
             System.out.println("The Element popped is "+poppedData);
         linkedList1.display();
-        System.out.println("--------");
+        System.out.println("*****************************************");
 //UC6:Delete the Last Element;
         LinkedList<Integer>linkedList2 = new LinkedList<>();
         linkedList2.push(70);
@@ -30,7 +30,7 @@ public class LinkedListMain {
             System.out.println("The Element popped is "+poppedData2);
 
         linkedList2.display();
-        System.out.println("--------");
+        System.out.println("-------");
 //UC7:search LinkedList to find Node with value 30;
         LinkedList<Integer>linkedList3 = new LinkedList<>();
         linkedList3.push(70);
@@ -43,5 +43,16 @@ public class LinkedListMain {
             System.out.println("Element 30 is not Found.");
         else
             System.out.println("Element 30 is Found.");
+        System.out.println("-------");
+//UC8:insert 40 after 30 to the Linked List sequence of 56->30->70;
+        linkedList3.display();
+
+        Boolean isInserted = linkedList3.insertAfter(30,40);
+        if (isInserted)
+            System.out.println("Element 40 is successfully Inserted.");
+        else
+            System.out.println("Element 40 is not Inserted.");
+
+        linkedList3.display();
     }
 }
