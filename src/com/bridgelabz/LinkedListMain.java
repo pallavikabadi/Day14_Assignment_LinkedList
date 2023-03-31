@@ -2,23 +2,17 @@ package com.bridgelabz;
 
 public class LinkedListMain {
     public static void main(String[] args) {
-        //uc1:
-        LinkedList<Integer> linkedList1 = new LinkedList<>();
-        linkedList1.add(56);
-        linkedList1.add(30);
-        linkedList1.add(70);
+    LinkedList<Integer>linkedList1 = new LinkedList<>();
+        linkedList1.append(56);
+        linkedList1.append(70);
         linkedList1.display();
-        //uc2:
-        LinkedList<Integer>linkedList2 = new LinkedList<>();
-        linkedList2.push(70);
-        linkedList2.push(30);
-        linkedList2.push(56);
-        linkedList2.display();
-        //UC3:
-        LinkedList<Integer>linkedList3 = new LinkedList<>();
-        linkedList3.append(56);
-        linkedList3.append(30);
-        linkedList3.append(70);
-        linkedList3.display();
-    }
+
+    Boolean isInserted = linkedList1.insertAfter(56,30);
+        if (isInserted)
+            System.out.println("Element Inserted Successfully.");
+        else
+                System.out.println("Element is not Inserted!");
+
+        linkedList1.display();
+}
 }
