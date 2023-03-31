@@ -54,5 +54,17 @@ public class LinkedListMain {
             System.out.println("Element 40 is not Inserted.");
 
         linkedList3.display();
+
+        //UC9:Delete 40 & linkedList Size;
+        linkedList3.display();
+        Node<Integer> deletedData = linkedList3.delete(40);
+        if (deletedData == null)
+            System.out.println("Element 40 is NOT Deleted.");
+        else
+            System.out.println("Element 40 is Deleted.");
+
+        linkedList3.display();
+        linkedList3.size();
+
     }
 }

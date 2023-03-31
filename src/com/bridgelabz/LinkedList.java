@@ -78,4 +78,33 @@ public class LinkedList <T>{
         return false;
 
     }
+    public Node<T> delete(T delete) {
+        Node<T> temp1 = head;
+        Node<T> temp2 = head;
+        Node<T> temp3 = head;
+        int count = 0;
+        while (temp1 != null & temp2 != null & temp3 != null) {
+            count++;
+            if (count > 2) {
+                temp3 = temp3.next;
+            }
+            if (temp1.data == delete) {
+                temp2 = temp2.next;
+                temp3.next = temp2;
+            }
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+        return temp1;
+    }
+    public Node<T> size() {
+        Node<T> temp = head;
+        int count = 0;
+        while (temp != null) {
+            temp = temp.next;
+            count++;
+        }
+        System.out.println("LinkedList Size = " + count);
+        return temp;
+    }
 }
